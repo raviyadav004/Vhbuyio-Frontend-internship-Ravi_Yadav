@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">E-Learning</div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="cta-btn">Start Learning</a></li>
+            </ul>
+            <button class="hamburger" id="openMenu" aria-label="Open Menu" aria-expanded="false" aria-controls="sidebar">☰</button>
+        </nav>
+    </header>
+
+    <aside class="sidebar" id="sidebar" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">E-Learning</div>
+            <button class="close-btn" id="closeMenu" aria-label="Close Menu">×</button>
+        </div>
+        <ul id="sidebarLinks">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="#" class="cta-btn">Start Learning</a>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main class="hero">
+        <h1>Master Skills Anytime</h1>
+        <p>Advance your career with top-quality courses designed by experts. Learn at your own pace with SkillEdge’s interactive platform.</p>
+        <a href="#" class="cta-btn">Explore Courses</a>
+    </main>
+
+    <script src="Script.js"></script>
+</body>
+</html>
