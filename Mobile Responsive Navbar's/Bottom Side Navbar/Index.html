@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillEdge | E-Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SkillEdge</div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="cta-btn">Start Learning</a></li>
+        </ul>
+        <button class="hamburger" id="openMenu" aria-label="Open Menu">☰</button>
+    </header>
+
+    <div class="bottom-sheet" id="bottomSheet" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="sheet-header">
+            <h2>Menu</h2>
+            <span class="close-btn" id="closeSheet">×</span>
+        </div>
+        <ul id="sheetLinks">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="#" class="cta-btn">Start Learning</a>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main class="hero">
+        <h1>Learn Without Limits</h1>
+        <p>Join thousands of learners worldwide and upgrade your skills with high-quality online courses designed by industry experts.</p>
+        <a href="#" class="cta-btn">Explore Courses</a>
+    </main>
+
+    <script src="Script.js"></script>
+</body>
+</html>

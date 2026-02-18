@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+    color: #0f172a;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+button:focus , a:focus {
+    outline: 2px solid #1d4ed8;
+    outline-offset: 3px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffffcc;
+    backdrop-filter: blur(10px);
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1d4ed8;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: none;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-links li a {
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #1d4ed8;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover::after , .nav-links li a.active::after {
+    width: 100%;
+}
+
+.nav-links li a.active {
+    color: #1d4ed8;
+}
+
+.cta-btn {
+    padding: 12px 28px;
+    border-radius: 35px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 36px rgba(59, 130, 246, 0.45);
+}
+
+.hamburger {
+    font-size: 28px;
+    display: block;
+    color: #1d4ed8;
+}
+
+.bottom-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 80%;
+    background: #f8fafc;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 0 -10px 35px rgba(0, 0, 0, 0.18);
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    overflow-y: auto;
+}
+
+.bottom-sheet.active {
+    transform: translateY(0);
+}
+
+.bottom-sheet::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 5px;
+    background: #94a3b8;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.bottom-sheet .sheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.bottom-sheet .sheet-header h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1d4ed8;
+}
+
+.bottom-sheet .close-btn {
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.bottom-sheet .close-btn:hover {
+    transform: scale(1.1);
+    color: #1d4ed8;
+}
+
+.bottom-sheet ul {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 25px;
+}
+
+.bottom-sheet ul li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.bottom-sheet ul li a {
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: 0.3s;
+    color: #0f172a;
+}
+
+.bottom-sheet ul li a:hover, .bottom-sheet ul li a.active {
+    color: #1d4ed8;
+    padding-left: 10px;
+    transform: scale(1.05);
+}
+
+.bottom-sheet .cta-btn {
+    margin-top: auto;
+    text-align: center;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1500;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    max-width: 650px;
+    margin-bottom: 30px;
+    color: #334155;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+@media(min-width:768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .bottom-sheet , .overlay {
+        display: none;
+    }
+}
