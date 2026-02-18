@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">E-Learning</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="auth-area" id="authArea"></div>
+            <button class="hamburger" id="openMenu">☰</button>
+        </nav>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul id="sideLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="mobile-auth" id="mobileAuth"></div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section class="hero">
+        <h1>Learn Without <span>Limits</span></h1>
+        <p>Master high-demand skills and accelerate your career with expert-led courses.</p>
+        <button class="hero-btn">Explore Courses</button>
+    </section>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-box">
+            <span class="close-modal" onclick="closeLogin()">✕</span>
+            <h2>Login</h2>
+            <div class="success" id="successMsg"></div>
+            <input type="text" id="userId" placeholder="Enter User ID">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>
